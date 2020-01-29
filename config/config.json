@@ -1,0 +1,27 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "quick-links-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/quickLinks/QuickLinksWebPart.js",
+          "manifest": "./src/webparts/quickLinks/QuickLinksWebPart.manifest.json"
+        }
+      ]
+    },
+    "image-gallery-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/imageGallery/ImageGalleryWebPart.js",
+          "manifest": "./src/webparts/imageGallery/ImageGalleryWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "QuickLinksWebPartStrings": "lib/webparts/quickLinks/loc/{locale}.js",
+    "ImageGalleryWebPartStrings": "lib/webparts/imageGallery/loc/{locale}.js"
+  }
+}
