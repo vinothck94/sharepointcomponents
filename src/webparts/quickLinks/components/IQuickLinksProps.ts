@@ -1,3 +1,4 @@
 export interface IQuickLinksProps {
-  description: string;
+  description?: string;
+  items: any[];
 }

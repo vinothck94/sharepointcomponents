@@ -18,10 +18,11 @@ export interface IQuickLinksWebPartProps {
 export default class QuickLinksWebPart extends BaseClientSideWebPart<IQuickLinksWebPartProps> {
 
   public render(): void {
-    const element: React.ReactElement<IQuickLinksProps > = React.createElement(
+    const element: React.ReactElement<IQuickLinksProps> = React.createElement(
       QuickLinks,
       {
-        description: this.properties.description
+        description: this.properties.description,
+        items: []
       }
     );
 
