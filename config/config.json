@@ -17,11 +17,20 @@
           "manifest": "./src/webparts/imageGallery/ImageGalleryWebPart.manifest.json"
         }
       ]
+    },
+    "birthdays-anniversaries-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/birthdaysAnniversaries/BirthdaysAnniversariesWebPart.js",
+          "manifest": "./src/webparts/birthdaysAnniversaries/BirthdaysAnniversariesWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
   "localizedResources": {
     "QuickLinksWebPartStrings": "lib/webparts/quickLinks/loc/{locale}.js",
-    "ImageGalleryWebPartStrings": "lib/webparts/imageGallery/loc/{locale}.js"
+    "ImageGalleryWebPartStrings": "lib/webparts/imageGallery/loc/{locale}.js",
+    "BirthdaysAnniversariesWebPartStrings": "lib/webparts/birthdaysAnniversaries/loc/{locale}.js"
   }
 }
