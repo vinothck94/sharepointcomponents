@@ -1,6 +1,6 @@
 export interface IAddQuickLinksProps {
   formData: {
-    title: string;
-    url: string;
+    Title: string;
+    Url: string;
   };
 }

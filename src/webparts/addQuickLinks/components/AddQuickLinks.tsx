@@ -3,20 +3,32 @@ import styles from './AddQuickLinks.module.scss';
 import { IAddQuickLinksProps } from './IAddQuickLinksProps';
 import { escape } from '@microsoft/sp-lodash-subset';
 
+import { sp } from "@pnp/sp";
+import "@pnp/sp/webs";
+import "@pnp/sp/lists/web";
+import "@pnp/sp/items/list";
+
+
 export default class AddQuickLinks extends React.Component<IAddQuickLinksProps, IAddQuickLinksProps> {
 
   constructor(props) {
     super(props);
     this.state = {
       formData: {
-        title: '',
-        url: ''
+        Title: '',
+        Url: ''
       }
     };
   }
 
   formHandler() {
-    var data = this.state.formData;
+    var objModel = this.state.formData;
+    sp.web.lists
+        .getByTitle("QuickLinks")
+        .items.add(objModel)
+        .then((response) => {
+          alert(response.data.Id + '');
+        });
   }
 
   inputChangeHandler(e) {
@@ -36,11 +48,11 @@ export default class AddQuickLinks extends React.Component<IAddQuickLinksProps, 
             <div className={styles.column}>
               <form>
 
-                <strong>Title:</strong> <br /> <input type="text" name="title" placeholder="Title" onChange={(e) => this.inputChangeHandler.call(this, e)} value={this.state.formData.title} /> <br />
+                <strong>Title:</strong> <br /> <input type="text" name="Title" placeholder="Title" onChange={(e) => this.inputChangeHandler.call(this, e)} value={this.state.formData.Title} /> <br />
 
-                <strong>URL:</strong> <br /> <input type="text" name="url" placeholder="URL" onChange={(e) => this.inputChangeHandler.call(this, e)} value={this.state.formData.url} /> <br />
+                <strong>URL:</strong> <br /> <input type="text" name="Url" placeholder="URL" onChange={(e) => this.inputChangeHandler.call(this, e)} value={this.state.formData.Url} /> <br />
 
-                <button onClick={(e) => this.formHandler()}>Submit</button>
+                <button type="button" onClick={(e) => this.formHandler()}>Submit</button>
               </form>
 
             </div>
