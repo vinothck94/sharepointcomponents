@@ -17,11 +17,20 @@
           "manifest": "./src/webparts/imageGallery/ImageGalleryWebPart.manifest.json"
         }
       ]
+    },
+    "add-quick-links-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/addQuickLinks/AddQuickLinksWebPart.js",
+          "manifest": "./src/webparts/addQuickLinks/AddQuickLinksWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
   "localizedResources": {
     "QuickLinksWebPartStrings": "lib/webparts/quickLinks/loc/{locale}.js",
-    "ImageGalleryWebPartStrings": "lib/webparts/imageGallery/loc/{locale}.js"
+    "ImageGalleryWebPartStrings": "lib/webparts/imageGallery/loc/{locale}.js",
+    "AddQuickLinksWebPartStrings": "lib/webparts/addQuickLinks/loc/{locale}.js"
   }
 }

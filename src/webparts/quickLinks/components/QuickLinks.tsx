@@ -14,13 +14,7 @@ export default class QuickLinks extends React.Component<IQuickLinksProps, IQuick
         super(props);
         this.state = {
             description: 'Local description',
-            items: [{
-                Title: 'Local data 1',
-                Url: 'https://chandrudemo.sharepoint.com/sites/AhmedPortal/_layouts/15/workbench.aspx'
-            }, {
-                Title: 'Local data 2',
-                Url: 'https://chandrudemo.sharepoint.com/sites/AhmedPortal/_layouts/15/workbench.aspx'
-            }]
+            items: []
         };
         this.loadLinks();
     }
